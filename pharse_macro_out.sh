@@ -15,8 +15,8 @@ cat  all-macro1.txt  |grep  -v "^SIG" > all-macro2.txt
 cat  all-macro2.txt  |grep -i -E "atomic|cmp|xchg" > atomic.txt
 cat  all-macro2.txt  |grep -i -v -E "atomic|cmp|xchg" > all-macro3.txt
 
-cat  all-macro3.txt  |grep -i -E "pgd|pud|pmd|pte|page|virt|phy|pg|_mm" > mem.txt
-cat  all-macro3.txt  |grep -i -v -E "pgd|pud|pmd|pte|page|virt|phy|pg|_mm" > all-macro4.txt
+cat  all-macro3.txt  |grep -i -E "pgd|pud|pmd|pte|page|virt|phy|pg|_mm|pa" > mem.txt
+cat  all-macro3.txt  |grep -i -v -E "pgd|pud|pmd|pte|page|virt|phy|pg|_mm|pa" > all-macro4.txt
 
 cat  all-macro4.txt  |grep -i -E "read|write|out|io|^in|bit" > io.txt
 cat  all-macro4.txt  |grep -i -v -E "read|write|out|io|^in|bit" > all-macro5.txt
